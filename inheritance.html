@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+    <div id="result"></div>
+
+
+
+
+    <script>
+        // Base class
+
+        class Animals {
+            constructor (name) {
+                    this.name = name;
+                    
+            }
+        }
+
+        //Derive class
+            
+        class Animal extends Animals {
+            constructor (name, breed, sound, sex) {
+                super(name);
+                this.breed = breed;
+                this.sound = sound;
+                this.sex = sex;
+            }
+
+            showAnimal() {
+                document.getElementById('result')
+                .innerHTML = ` 
+                Name: ${this.name} <br>
+                Breed: ${this.breed} <br>
+                Sound: ${this.sound} <br>
+                Sex: ${this.sex} <br>
+                `
+            }
+        }
+
+        //Object: instance of a new class
+
+        const Dog = new Animal("Bingo", "German-shepherd", "Bark", "Male");
+        Dog.showAnimal();
+
+
+    </script>
+</body>
+</html>

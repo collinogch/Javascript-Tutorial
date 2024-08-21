@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        
+    const products = {
+        name: "intermediate basketball",
+        quantity: 2,
+        description: "White and big intermediate",
+        rating: {
+            star: 4.5,
+            count: 87
+        },
+        task: function callName () {
+            alert(`${products.name}`);
+        },
+        'delivery-date': "20/12/2024"
+    }
+    // console.log(products)
+
+    // // Accessing object values using the Dot (.) notation
+
+    // console.log(products.description);
+    // console.log(products.name);
+    // console.log(products.rating.star);
+    // products.task(); // Userdefined method
+
+    // // Inbuilt Methods
+
+    // Math.random();
+    // Math.ceil();
+    // console.log();
+
+
+    // console.log(products);
+
+    // Accessing object values using the squared bracket notation
+    
+    // console.log(products["name"])
+    // console.log(products["rating"] ["star"]);
+    // console.log(products["delivery-date"])
+        
+
+    // Adding new items to an existing object
+
+    // console.log(products);
+    // products.price = 2000;
+    // console.log(products)
+
+    // //deleting an item from already existing object
+
+    // delete products.rating.count
+    // console.log(products)
+
+
+
+    const dispatchRider = prompt ("Whats your name")
+    products.rider = dispatchRider
+    console.log(products)
+
+    </script>
+</body>
+</html>

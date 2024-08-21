@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body>
+    
+    <button>Send Notification</button>
+
+    <script>
+        setInterval(function sayHi () {
+            console.log("Hi everyone, I'm a chatbot")
+        }, 2000)
+
+        // Asynchronous Operation
+        // console.log("starting first task");
+        // setTimeout(() => {
+        //     console.log("Hey everyone is waiting for me")
+        //     console.log("finished the task")
+        // }, 3000);
+
+        // console.log("starting the next task")
+
+        // setInterval(() => {
+        //     alert('I amd saying Hi');
+        // },5000)
+
+            let notNum = 0;
+            const maxNot = 5;
+
+            const notInterval = setInterval(() => {
+                if(notNum != maxNot) {
+                    alert("You have a new notification");
+                    notNum++;
+                }
+                else if (notNum === maxNot) {
+                    alert("you have reached maximum number of notification")
+                    clearInterval(notInterval);
+                }
+            }, 10000)
+        </script>
+</body>
+</html>

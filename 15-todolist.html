@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-do List</title>
+    <link rel="stylesheet" href="15-todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="control-todo">
+            <input type="text" placeholder="To-do..." id="todoInput">
+            <input type="date" id="dueDate">
+            <button class="add-todo-btn" id="addToDo-btn">Add To-Do</button>
+        </div>
+        <div class="display-todo-list" id="todolist-output"></div>
+    </div>
+
+
+
+    <script>
+        const todoInput = document.getElementById('todoInput');
+        const dueDateInput = document.getElementById('dueDate');
+        const addTodoBtn= document.getElementById('addToDo-btn');
+        const outputDiv = document.getElementById('todolist-output')
+
+
+        const todoList = JSON.parse(localStorage.getItem('todoList')) ||
+        [
+            {
+                todo:  "Make dinner",
+                dueDate: "7/12/2024"
+            },
+            {
+                todo:  "Watch Youtube",
+                dueDate: "4/10/2024"
+            },
+            {
+                todo:  "Wash Dishes",
+                dueDate: "4/10/2024"
+            }
+        ]
+        displayTodo();
+        
+        // Defining the Add To-Do function
+        function addToDo () {
+            const todo = todoInput.value;
+            const dueDate = dueDateInput.value;
+            todoList.push({
+                todo,
+                dueDate
+            })
+            localStorage.setItem('todoList', JSON.stringify(todoList))
+        }
+
+        // handling the add to- do button
+        addTodoBtn.addEventListener('click', () => {
+            addToDo();
+            displayTodo();
+        })
+
+        function displayTodo () {
+            let todoListHTML = ''; //Accumulator variable;
+            //Looping through the to-do list array
+            todoList.forEach((todo, index) => {
+               const todoObject = {todo,dueDateInput};
+               const toDo = todo.todo;
+               const dueDate = todo.dueDate;
+               // generating html for each to-do in the array
+               todoListHTML += `
+               <div class="list-container">
+                        <p>
+                            ${toDo}
+                            </p>
+                        <p>
+                            ${dueDate}
+                            </p>
+                        <button class="delete-btn" onclick="
+                            todoList.splice(${index}, 1);
+                            localStorage.setItem('todoList', JSON.stringify(todoList))
+                            displayTodo();
+                            alert('One item deleted from the To-do list')
+                        ">
+                            Delete
+                            </button>
+                </div>
+               `
+            })
+            outputDiv.innerHTML = todoListHTML;
+        }
+        
+    </script>
+</body>
+</html>

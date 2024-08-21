@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming</title>
+</head>
+<body>
+        <div id="result"></div>
+
+
+
+    <script>
+        // Class construction
+        class Benz {
+            constructor(name, model, engine, color) {
+                this.name = name;
+                this.model = model;
+                this.engine = engine;
+                this.color = color;
+            }
+
+            showCarFeatures () {
+                document.getElementById('result')
+                .innerHTML = ` 
+                Name: ${this.name} <br>
+                Model: ${this.model} <br>
+                Engine: ${this.model} <br>
+                Color: ${this.color} <br>
+                `
+            }
+        }
+
+
+        // Object instance of a new class
+
+        const Glk = new Benz("GLK", "Glk-2024", "V8", "Red")
+        Glk.showCarFeatures();
+    </script>
+</body>
+</html>

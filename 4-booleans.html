@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans and if Statements </title>
+</head>
+<body>
+    = assignment operator <br>
+    === strictly equal or <br>
+    > greater than <br>
+    < less than <br>
+    >= greater than or equal to <br>
+    <= less than or equal to <br>
+    && the and operator <br>
+    || the or operator <br>
+<br>
+    if () {} <br>
+    else if <br>
+    else <br>
+    switch <br>
+    
+
+    <script>
+// const level = 0; // truthy value;  
+// const age = null; // falsy value;
+// const userInfo = false; // falsy value;
+// const userAge = true; // truthy value;
+// const userLevel = underfined; // falsy value;
+// const isNumber = NaN // falsy value
+
+// let name = '';
+// if(name) {
+//     console.log(" name is a truthy value")
+// }
+
+
+// let level = 30;
+// if (level > 10) {
+//     console.log("level is greater than 10");
+// } else if (level >= 10) {
+//     console.log("level is at least up to 10")
+// }
+// else {
+//     console.log("level is currently below 10")
+// }
+
+     const age = 20;
+        const level = 30;
+        const trueResultText = " Age is greater than 30";
+        const falseResultText = " age is not greater than 30";
+
+        // The Hand operator
+    if(age === 40 && level < 40) {
+        console.log("both booleans are through");
+    }
+    else{
+        console.log("either of the booleans could be false")
+    }
+
+    // The OR operator
+    if(age > 40 || level < 40) {
+        console.log("one side of the condition is true")
+    }
+    else {
+        console.log("none of the condition returned true")
+    }
+
+
+    // The Tenary Operator
+    age > 30 ? console.log(trueResultText) : console.log(falseResultText)
+
+    </script>
+</body>
+</html>

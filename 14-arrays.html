@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    Arrays - List elements in Programming
+
+
+    <script>
+        const laptops = ["Dell","hp", "Acer", "Lenovo", "Toshiba",
+            "Subara", "Mac OS"];
+            ;
+            const latestMobiles = ["i12", "i13", "i14", "i15" ]
+
+        // //Checking an Array
+        // console.log(typeof laptops)
+
+        // //Validating an Array
+        // console.log(Array.isArray(laptops))
+        // console.log(laptops)
+
+        // // Array Desctructuring
+        // const [first, second, third, fourth, fifth, sixth, seventh] = laptops;
+        // console.log(seventh)
+
+        // const userInfo = [
+        //     {
+        //         name: "Reggie",
+        //         age: 20,
+        //         id: 23456
+        //     },
+        //     20, ""
+        // ]
+
+        // laptops[0, 3, 6]
+        // console.log(laptops[0, 3, 6])
+
+        // // Common Arrays Methods
+        // console.log(laptops);
+        // laptops.push("Assus")
+        // console.log(laptops)
+
+        // laptops.unshift("device")
+        // console.log(laptops)
+
+        // laptops.shift()
+        // console.log(laptops)
+
+        // laptops.splice('0', 3)
+        // console.log(laptops)
+
+        // const newDevices = laptops.concat(latestMobiles)
+        // console.log(newDevices)
+
+
+        //Looping through an Array
+
+    //    for(let i = 0; i < laptops.length; i++) {
+    //         if(laptops[i] === 'Toshiba') {
+    //             console.log('yes')
+    //         }
+    //    }
+
+
+    // // The Break statement
+    // for(let i = 0; i < laptops.length; i++) {
+    //     if(laptops[i] === 'Lenovo') {
+    //         console.log(laptops[1]);
+    //         break;
+    //     }
+    //     else {
+    //         console.log(laptops[i])
+    //     }
+    // }
+
+    // // The Continous Statement
+    // for(let i = 0; i <= 10; i++) {
+    //     if(i === 5) {
+    //         continue;
+    //     }
+    //     if(i === 6) {
+    //         continue;
+    //     }
+    //     console.log(i)
+    // }
+
+    // ForEach Array
+
+    laptops.forEach((laptop, index) => {
+        console.log(index + 1, laptop)
+    })
+    </script>
+</body>
+</html>

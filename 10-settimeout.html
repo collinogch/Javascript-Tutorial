@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+
+<style>
+.added-message {
+    color: green;
+    font-family: gabriola;
+    font-size: smaller;
+    display: block;
+    transition: all 0.9s;
+}
+
+.added-msg-hidden{
+    display: none;
+    transition: all 0.9s;
+}
+
+.js-added-to-cart{
+    transition: all 0.9s;
+}
+</style>
+
+<body>
+
+    <div class="added-msg-hidden js-added-to-cart"> Added</div>
+    <button onclick="showAddedCartMessage()"> Add to Cart</button>
+
+
+
+
+
+    <script>
+
+        setTimeout(function sayHi () {
+            console.log("Hi everyone, I'm a chatbot")
+        }, 2000)
+
+        //Synchronous Operation
+        // console.log("starting first task")
+        // console.log("starting second task")
+        // console.log("starting third task")
+
+
+        function showAddedCartMessage () {
+            document.querySelector('.js-added-to-cart')
+            .classList.add('added-message')
+            document.querySelector('.js-added-to-cart')
+            .classList.remove('added-msg-hidden')
+
+            setTimeout(() => {
+                document.querySelector('.js-added-to-cart')
+                .classList.remove('added-message')
+                document.querySelector('.js-added-to-cart')
+                .classList.add('added-msg-hidden')
+            }, 1000)
+        }
+    </script>
+</body>
+</html>
